@@ -197,6 +197,9 @@
         function renderSlide(index) {
             stopAllAudio();
             if (!screens[index]) return;
+            
+            // Remove splash-mode by default
+            contentArea.classList.remove('splash-mode');
 
             // Track time
             const now = Date.now();
@@ -502,14 +505,17 @@
 
             const cSection = document.getElementById('character-section');
             if (cSection) cSection.style.display = 'none';
+            
+            // Add splash-mode to content area
+            contentArea.classList.add('splash-mode');
 
             const logoHtml = splashLogo ? `
-                <div class="logo-placeholder" style="width: 150px; height: 150px; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; background: ${logoColor}; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3);">
+                <div class="logo-placeholder" style="background: ${logoColor}; border: 4px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3);">
                     <img src="${encodeURI(splashLogo)}" style="max-width: 80%; max-height: 80%; object-fit: contain;">
                 </div>
             ` : `
-                <div class="logo-placeholder" style="width: 150px; height: 150px; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; background: ${logoColor}; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); box-shadow: 0 0 30px rgba(0,0,0,0.3);">
-                    <i class="fas fa-shield-halved" style="font-size: 4rem; color: white;"></i>
+                <div class="logo-placeholder" style="background: ${logoColor}; border: 4px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(0,0,0,0.3);">
+                    <i class="fas fa-shield-halved" style="font-size: 3rem; color: white;"></i>
                 </div>
             `;
 
@@ -517,10 +523,10 @@
             const content = "לחצו על הכפתור למטה כדי להתחיל בלמידה.";
 
             contentArea.innerHTML = `
-                <div class="splash-view" style="text-align: center; padding-top: 20px;">
+                <div class="splash-view" style="text-align: center;">
                     ${logoHtml}
-                    <h1 style="font-size: 2.2rem; margin-bottom: 20px; color: ${logoColor};">${title}</h1>
-                    <p style="font-size: 1.15rem; line-height: 1.6; margin-bottom: 40px; color: #f8fafc; max-width: 90%; margin-left: auto; margin-right: auto;">${content}</p>
+                    <h1 style="color: ${logoColor};">${title}</h1>
+                    <p style="margin-bottom: 20px;">${content}</p>
                 </div>
             `;
 
