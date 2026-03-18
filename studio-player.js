@@ -160,16 +160,36 @@
 
             const loadImg = (url) => new Promise((res) => {
                 if (!url) return res();
+                const timeout = setTimeout(() => {
+                    console.warn('[StudioPlayer] Image load timeout:', url);
+                    res();
+                }, 5000);
                 const img = new Image();
-                img.onload = img.onerror = () => res();
+                img.onload = img.onerror = () => {
+                    clearTimeout(timeout);
+                    res();
+                };
                 img.src = url;
             });
 
             const loadAudio = (url) => new Promise((res) => {
                 if (!url) return res();
+                // Most mobile browsers block audio preloading. 
+                // We'll set a short timeout and also listen for initial load events.
+                const timeout = setTimeout(() => {
+                    console.warn('[StudioPlayer] Audio load timeout (expected on mobile):', url);
+                    res();
+                }, 2000);
+                
                 const audio = new Audio();
-                audio.oncanplaythrough = audio.onerror = () => res();
+                // On mobile, 'onloadstart' or 'onloadedmetadata' might fire, 
+                // but 'oncanplaythrough' often won't until user gesture.
+                audio.onloadedmetadata = audio.onloadstart = audio.onerror = () => {
+                    clearTimeout(timeout);
+                    res();
+                };
                 audio.src = url;
+                audio.load(); // Explicitly trigger load
             });
 
             updateStatus('טוען גרפיקה וסאונד...');
@@ -181,17 +201,21 @@
             });
             assets.push(loadImg(resolveAssetPath('maya_guide.png')));
 
-            // Split into batches to avoid overloading
+            // Split into batches to avoid overloading, but don't let it block forever
             const batchSize = 10;
             const total = assets.length;
             for (let i = 0; i < assets.length; i += batchSize) {
                 const batch = assets.slice(i, i + batchSize);
-                await Promise.all(batch);
+                try {
+                    await Promise.all(batch);
+                } catch (e) {
+                    console.warn('[StudioPlayer] Batch load error:', e);
+                }
                 updateStatus(`טוען משאבי לומדה (${Math.round((Math.min(i + batchSize, total) / total) * 100)}%)...`);
             }
             
             updateStatus('הטעינה הושלמה!');
-            await new Promise(r => setTimeout(r, 800));
+            await new Promise(r => setTimeout(r, 500));
         }
 
         function renderSlide(index) {
