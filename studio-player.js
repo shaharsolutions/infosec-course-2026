@@ -20,6 +20,33 @@
         }
     }
 
+    function fitPlayer() {
+        const container = document.getElementById('player-container');
+        if (!container) return;
+        
+        const windowW = window.innerWidth;
+        const windowH = window.innerHeight;
+        const targetW = 1280;
+        const targetH = 720;
+        const ratio = targetW / targetH;
+        const screenRatio = windowW / windowH;
+
+        let finalW, finalH;
+        if (screenRatio > ratio) {
+            finalH = Math.min(windowH, targetH);
+            finalW = finalH * ratio;
+        } else {
+            finalW = Math.min(windowW, targetW);
+            finalH = finalW / ratio;
+        }
+
+        container.style.width = Math.floor(finalW) + 'px';
+        container.style.height = Math.floor(finalH) + 'px';
+    }
+
+    window.addEventListener('resize', fitPlayer);
+    window.addEventListener('orientationchange', () => setTimeout(fitPlayer, 200));
+
     function hexToRgba(hex, alpha = 1) {
         if (!hex || !hex.startsWith('#')) return `rgba(56, 189, 248, ${alpha})`;
         const r = parseInt(hex.slice(1, 3), 16);
@@ -501,6 +528,7 @@
             // Hide loading screen and show player
             document.getElementById('loading-screen').style.display = 'none';
             document.getElementById('player-container').style.display = 'block';
+            fitPlayer();
 
             restoreState();
             // If we are at index 0 and it's a fresh start, we can show a dedicated splash

@@ -13,10 +13,13 @@ body {
     background: #000;
     color: var(--text-main);
     overflow: hidden;
-    height: 100vh;
+    height: 100dvh;
+    width: 100dvw;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    touch-action: manipulation;
 }
 
 body::before {
@@ -28,11 +31,6 @@ body::before {
 }
 
 #player-container {
-    width: 100vw;
-    height: 100vh;
-    max-width: 1280px;
-    max-height: 720px;
-    aspect-ratio: 16 / 9;
     background: var(--bg-dark);
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,6 +38,7 @@ body::before {
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    display: none; /* Hidden until loaded */
 }
 
 /* Splash Mode - Centered & Wide */
