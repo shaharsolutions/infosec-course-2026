@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="Course_1773857876664" version="1.0" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2 imsmd_rootv1p2.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<manifest identifier="Course_1773858552497" version="1.0" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2 imsmd_rootv1p2.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
     <metadata><schema>ADL SCORM</schema><schemaversion>1.2</schemaversion></metadata>
     <organizations default="ORG_1"><organization identifier="ORG_1"><title>infosec_scorm_v13_final</title><item identifier="ITEM_1" identifierref="RES_1"><title>infosec_scorm_v13_final</title></item></organization></organizations>
     <resources><resource identifier="RES_1" type="webcontent" adlcp:scormtype="sco" href="index.html">
-        <file href="assets/audio/ai_narration_1773238944417.mp3"/>
         <file href="assets/audio/ai_narration_1773238921361.mp3"/>
+        <file href="assets/audio/ai_narration_1773238944417.mp3"/>
         <file href="assets/audio/ai_narration_1773238892916.mp3"/>
-        <file href="assets/audio/audio_1773214689941.wav"/>
-        <file href="assets/mia_transparent_v4.png"/>
         <file href="assets/maya_guide.png"/>
-        <file href="assets/audio/audio_1773214696349.wav"/>
+        <file href="assets/mia_transparent_v4.png"/>
         <file href="assets/audio/audio_1773214684829.wav"/>
         <file href="assets/audio/audio_1773214677779.wav"/>
+        <file href="assets/audio/audio_1773214696349.wav"/>
         <file href="assets/audio/audio_1773214702050.wav"/>
+        <file href="assets/audio/audio_1773214689941.wav"/>
         <file href="export-log.txt"/>
         <file href="assets/new_scene_question.png"/>
-        <file href="assets/new_scene_explanation.png"/>
-        <file href="assets/scene_welcome.png"/>
-        <file href="assets/new_scene_welcome.png"/>
         <file href="assets/scene_explanation.png"/>
+        <file href="assets/scene_welcome.png"/>
+        <file href="assets/new_scene_explanation.png"/>
+        <file href="assets/new_scene_welcome.png"/>
         <file href="assets/scene_question.png"/>
-        <file href="logos/1773848848839_improve-it_logo-removebg-preview.png"/>
+        <file href="logos/1773837450300_improve-it_logo-removebg-preview.png"/>
         <file href="logos/1773829219575_improve-it_logo-removebg-preview.png"/>
         <file href="logos/1773773198385_improve-it_logo-removebg-preview.png"/>
         <file href="logos/1773840580219_improve-it_logo-removebg-preview.png"/>
-        <file href="logos/1773837450300_improve-it_logo-removebg-preview.png"/>
+        <file href="logos/1773848848839_improve-it_logo-removebg-preview.png"/>
         <file href="data.json"/>
         <file href="data.js"/>
         <file href="index.html"/>
