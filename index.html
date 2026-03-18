@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שחר פתרונות דיגיטליים - לומדה אינטראקטיבית</title>
+    <link rel="stylesheet" href="studio-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#0f172a; display:flex; flex-direction:column; justify-content:center; align-items:center; z-index:9999; color:white;">
+        <div class="loader-pulse"></div>
+        <h2 style="margin-top:30px; font-family:Assistant, sans-serif; letter-spacing:1px;">טוען לומדה...</h2>
+        <p id="loading-status" style="margin-top:10px; color:#38bdf8; font-family:Assistant, sans-serif;">מכין את קבצי המדיה</p>
+    </div>
+
+    <div id="player-container" style="display:none;">
+        <div class="overlay"></div>
+        
+        <div id="progress-container">
+            <div id="progress-bar" style="width: 0%"></div>
+        </div>
+
+        <div id="content-area">
+            <!-- Content injected via studio-player.js -->
+        </div>
+
+        <div id="character-section">
+            <div class="character-circle">
+                <img src="assets/maya_guide.png" class="character-img" id="player-char-img">
+            </div>
+            <div class="character-label" id="player-char-label">מונה - הממונה על אבטחת מידע</div>
+        </div>
+
+        <div id="nav-bar">
+            <button id="prev-btn" class="btn btn-secondary" style="display: none;">
+                <i class="fas fa-chevron-right"></i> הקודם
+            </button>
+            <button id="next-btn" class="btn btn-primary">
+                המשך <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+
+        <div id="toast"></div>
+    </div>
+
+    <script src="scorm_api.js"></script>
+    <script src="data.js"></script>
+    <script src="studio-player.js"></script>
+    <script>
+        // Automatic Character Selection Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const charImg = document.getElementById('player-char-img');
+            const charLabel = document.getElementById('player-char-label');
+            
+            // We'll try to guess based on data.json if needed, 
+            // but for now we'll default to InfoSec if 'אבטחה' is in the title (we check later in player.js if needed)
+            // Actually, player.js can handle it better.
+        });
+    </script>
+</body>
+</html>
