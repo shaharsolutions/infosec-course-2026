@@ -2,12 +2,12 @@
   "screens": [
     {
       "id": "welcome",
-      "logo": "logos/1773848848839_improve-it_logo-removebg-preview.png",
+      "logo": "logos/1773909288131_improve-it_logo-removebg-preview.png",
       "audio": "assets/audio/audio_1773214702050.wav",
       "title": "אבטחת מידע והגנת הפרטיות 2026",
       "bgImage": "assets/new_scene_welcome.png",
       "content": "שלום לכם, אני מיה. בשנת 2026, המידע הוא הנכס היקר ביותר של כל ארגון. היום נלמד איך להגן על המידע האישי והעסקי שלנו בעידן של איומים מתקדמים ושינויי חקיקה דרמטיים.",
-      "minDelay": 3,
+      "minDelay": 0,
       "logoBgColor": "#ffffff",
       "waitForAudio": false
     },
@@ -17,7 +17,7 @@
       "title": "מה נלמד היום?",
       "bgImage": "assets/new_scene_welcome.png",
       "content": "נבצע סקירה של תיקון 13 לחוק הגנת הפרטיות, נכיר את חובות הדיווח החדשות, ננתח מקרי תקיפה אמיתיים מהשנים האחרונות ונלמד כלים פרקטיים להגנה יומיומית.",
-      "minDelay": 3,
+      "minDelay": 0,
       "waitForAudio": false
     },
     {
@@ -26,7 +26,7 @@
       "title": "תיקון 13 לחוק הגנת הפרטיות",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "בשנת 2024-2025 עבר תיקון 13 ההיסטורי לחוק הגנת הפרטיות. התיקון מעניק לרשות להגנת הפרטיות סמכויות אכיפה חסרות תקדים, כולל קנסות מינהליים שיכולים להגיע למאות אלפי שקלים גם לעסקים קטנים.",
-      "minDelay": 3,
+      "minDelay": 0,
       "waitForAudio": false
     },
     {
@@ -35,7 +35,7 @@
       "title": "הגדרת מידע רגיש (2026)",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "החוק מרחיב את הגדרת המידע הרגיש. היום, לא רק נתונים רפואיים או דעות פוליטיות נחשבים לרגישים, אלא גם נתונים ביומטריים, נתוני מיקום קבועים ומידע על מצבו הכלכלי של אדם.",
-      "minDelay": 3,
+      "minDelay": 0,
       "waitForAudio": false
     },
     {
@@ -44,7 +44,7 @@
       "title": "חובת דיווח על אירוע אבטחה",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "קרה אירוע? עליכם לדווח לרשות להגנת הפרטיות תוך 72 שעות מרגע הגילוי. אי-דיווח נחשב לעבירה חמורה וגורר סנקציות כבדות, במיוחד אם המידע הדלף כולל נתונים אישיים של לקוחות.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -54,7 +54,7 @@
       "title": "סיפור מקרה: מתקפת שרשרת אספקה - Hertz (2025)",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "בשנת 2025, ענקית הרכב Hertz נפגעה בעקבות פריצה לספקית שירות ניהול הקבצים שלה (Cleo Communications). התוקפים ניצלו פרצה בתוכנה של הספק כדי להגיע למידע רגיש של לקוחות Hertz.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -64,7 +64,7 @@
       "title": "מה למדנו מהמקרה?",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "גם אם הארגון שלכם מאובטח, אתם חשופים דרך הספקים שלכם. תיקון 13 מחייב ארגונים לוודא שגם הספקים שלהם עומדים בסטנדרטים של אבטחת מידע, אחרת האחריות המשפטית עלולה ליפול עליכם.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -74,7 +74,7 @@
       "title": "בדיקת הבנה: שרשרת אספקה",
       "bgImage": "assets/new_scene_question.png",
       "content": "",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": {
         "text": "האם עסק קטן אחראי לפי חוק אם מידע דלף בגלל פריצה לתוכנת ענן חיצונית שהוא משתמש בה?",
         "options": [
@@ -101,7 +101,7 @@
       "title": "פישינג והתחזות (2023-2026)",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "בשנים 2023-2026 ראינו גלי תקיפה רחבים בהם תוקפים התחזו לגופים כמו כביש 6, דואר ישראל ורשות המסים. הם שלחו הודעות SMS עם לינק לתשלום חוב כביכול, במטרה לגנוב פרטי אשראי.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -111,7 +111,7 @@
       "title": "סיפור מקרה: המרכז הרפואי שמיר (2025)",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "בשנת 2025, במהלך חגי תשרי, המרכז הרפואי \"שמיר\" (אסף הרופא) חווה ניסיון שיבוש מערכות רחב היקף. מטרת התוקפים הייתה לשתק את פעילות בית החולים ולדרוש כופר עבור שחזור הנתונים.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -121,7 +121,7 @@
       "title": "עירנות מצילת חיים",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "המתקפה נבלמה בזכות זיהוי מוקדם של מערך הסייבר הלאומי וצוותי ה-IT. המקרה ממחיש שבישראל, מתקפות סייבר הן לא רק נזק כלכלי אלא איום ממשי על חיי אדם ותפקוד מדינה.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -131,7 +131,7 @@
       "title": "איך מונעים הונאת ספקים?",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "כלל הזהב: אימות ערוץ כפול. בקשה לשינוי פרטי בנק? מרימים טלפון למספר המוכר (לא מהמייל החדש!) ומאמתים קולית את הבקשה לפני העברת כספים.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -141,7 +141,7 @@
       "title": "סיסמאות ואימות דו-שלבי (MFA)",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "סיסמה לבד כבר לא מספיקה ב-2026. אימות דו-שלבי (אפליקציית Authenticator או קוד ב-SMS) הוא חובה לכל חשבון עסקי. הוא מונע 99% מניסיונות הפריצה לחשבונות.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -151,7 +151,7 @@
       "title": "סיפור מקרה: שירביט - Shirbit (2020)",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "בשנת 2020, אחד האירועים המכוננים בישראל היה הפריצה לחברת \"שירביט\". תוקפים השיגו גישה למאגר המידע, הדליפו מסמכים אישיים של לקוחות (כולל צילומי תעודות זהות) וניהלו מו\"מ פומבי ומביך בטלגרם.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -161,7 +161,7 @@
       "title": "נזק בלתי הפיך",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "האירוע הוביל למכירת החברה בהפסד ניכר ולתביעות פיצויים של מיליונים. המקרה של שירביט הוכיח שהפקרת אבטחת המידע יכולה להוביל לחיסול עסקי מוחלט של חברה ותיקה.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -171,7 +171,7 @@
       "title": "הנדסה חברתית",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "תוקפים לא תמיד פורצים דרך הקוד. לפעמים הם פשוט מבקשים. \"היי, אני מהתמיכה הטכנית, שכחתי את הסיסמה לשרת, יכול לשלוח לי?\". לעולם אל תמסרו פרטי גישה לאחרים.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -181,7 +181,7 @@
       "title": "סיכון: Shadow IT",
       "bgImage": "assets/new_scene_explanation.png",
       "content": "שימוש באפליקציות שלא אושרו על ידי הארגון (כמו העלאת מסמכים עסקיים ל-AI ציבורי או אחסון בענן פרטי) הוא פרצת אבטחה חמורה. המידע הארגוני חייב להישאר במערכות הארגוניות.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -191,7 +191,7 @@
       "title": "בואו נבדוק מה למדנו",
       "bgImage": "assets/new_scene_question.png",
       "content": "הגענו לשלב הסיכום. לפנינו מספר שאלות קצרות לווידוא הבנה של עקרונות אבטחת המידע והחוק.",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -201,7 +201,7 @@
       "title": "בוחן: מהי חובת הדיווח?",
       "bgImage": "assets/new_scene_question.png",
       "content": "",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": {
         "text": "תוך כמה זמן יש לדווח על אירוע אבטחה חמור לרשות להגנת הפרטיות?",
         "options": [
@@ -228,7 +228,7 @@
       "title": "בוחן: הונאת ספקים",
       "bgImage": "assets/new_scene_question.png",
       "content": "",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": {
         "text": "קיבלת מייל מספק ותיק המבקש שינוי פרטי חשבון בנק. מה הפעולה הנכונה?",
         "options": [
@@ -255,7 +255,7 @@
       "title": "בוחן: אימות דו-שלבי",
       "bgImage": "assets/new_scene_question.png",
       "content": "",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": {
         "text": "למה חשוב להפעיל MFA (אימות דו-שלבי)?",
         "options": [
@@ -282,7 +282,7 @@
       "title": "סיכום וסיום",
       "bgImage": "assets/new_scene_welcome.png",
       "content": "אבטחת מידע היא לא רק אחריות של מחלקת המחשוב - היא האחריות של כל אחד מאיתנו. עירנות, זהירות ועמידה בהוראות החוק יגנו עליכם ועל הארגון. תודה על השתתפותכם!",
-      "minDelay": 3,
+      "minDelay": 0,
       "question": null,
       "waitForAudio": false
     },
@@ -298,7 +298,7 @@
         "email": "security@org.co.il",
         "phone": "050-1234567"
       },
-      "minDelay": 3,
+      "minDelay": 0,
       "waitForAudio": false
     }
   ]

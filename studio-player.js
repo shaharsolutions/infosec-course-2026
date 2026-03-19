@@ -407,7 +407,7 @@
             // Return feedback toast if already submitted
             if (isSubmitted && screen.question) {
                 setTimeout(() => {
-                    const status = "כבר ענית על שאלה זו";
+                    const status = `<span class="feedback-status info">כבר ענית על שאלה זו</span>`;
                     const feedback = screen.question.feedback || "התשובה הנכונה מסומנת בירוק.";
                     showToast(screen.question.text || "", `${status}<br><br>${feedback}`, () => renderSlide(currentIndex + 1));
                 }, 300);
@@ -423,7 +423,10 @@
         }
 
         function checkAnswer() {
-            if (selectedIndex === -1) return;
+            if (selectedIndex === -1) {
+                showToast("שימו לב", "יש לסמן תשובה לפני הבדיקה.", null, "חזור לבחירה");
+                return;
+            }
             isSubmitted = true;
             const screen = screens[currentIndex];
             const opts = screen.question.options || [];
@@ -438,10 +441,10 @@
             const questionText = screen.question.text || "";
             if (selectedIndex === correctIdx) {
                 score++;
-                showToast(questionText, "תשובה נכונה<br><br>כל הכבוד! נכון מאוד.", () => renderSlide(currentIndex + 1));
+                showToast(questionText, `<span class="feedback-status correct">תשובה נכונה</span><br><br>כל הכבוד! נכון מאוד.`, () => renderSlide(currentIndex + 1));
             } else {
                 const feedback = screen.question.feedback || "לא נורא, התשובה הנכונה מסומנת בירוק.";
-                showToast(questionText, `תשובה לא נכונה<br><br>${feedback}`, () => renderSlide(currentIndex + 1));
+                showToast(questionText, `<span class="feedback-status incorrect">תשובה לא נכונה</span><br><br>${feedback}`, () => renderSlide(currentIndex + 1));
             }
             answeredCount++;
             
@@ -453,18 +456,19 @@
             saveState();
         }
 
-        function showToast(title, msg, onContinue = null) {
+        function showToast(title, msg, onContinue = null, btnText = null) {
             const t = document.getElementById('toast');
-            const isFinish = (title === "סיום לומדה" || title === "סיום הלומדה");
+            const isFinish = (title === "סיום לומדה" || title === "סיום הלומדה" || title === "סיכום לומדה");
+            t.classList.toggle('finish-toast', isFinish);
             
             t.innerHTML = `
                 <div style="border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 20px;">
-                    <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 10px;">${isFinish ? "סיכום לומדה" : "השאלה:"}</h3>
+                    <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 10px;">${isFinish ? "סיכום לומדה" : (title === "שימו לב" ? "" : "השאלה:")}</h3>
                     <p style="font-weight: 500; font-size: 1.1rem;">${title}</p>
                 </div>
-                <h3>${isFinish ? "תוצאות" : "פידבק"}</h3>
+                ${isFinish ? '<h3>תוצאות</h3>' : ''}
                 <p>${msg}</p>
-                <button class="btn btn-primary" style="margin-top:20px; width:100%" id="toast-close">${isFinish ? "סגור לומדה" : "המשך ללמידה"}</button>
+                <button class="btn btn-primary" style="margin-top:20px; width:100%" id="toast-close">${btnText || (isFinish ? "סגור לומדה" : "המשך ללמידה")}</button>
             `;
             t.style.display = 'block';
 
@@ -516,7 +520,7 @@
             SCORM.setScore(finalScore);
             SCORM.setComplete();
             saveState();
-            showToast("סיום לומדה", `סיימת את הלומדה! הציון שלך הוא ${finalScore}%. הלומדה תיסגר כעת.`);
+            showToast("סיום לומדה", `סיימת את הלומדה!<br><br>הציון שלך הוא:<br><span class="final-score">${finalScore}</span><br><br>הלומדה תיסגר כעת.`);
             setTimeout(() => { SCORM.finish(); window.close(); }, 3000);
         }
 
